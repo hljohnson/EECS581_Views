@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Voyage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/stylesheet.css" rel="stylesheet">
+
+    <!-- Font awesome custom styles -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- bootstrap javascript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+  </head>
+
+  <body>
+    <!-- Navbar --------------------------------------------------------------->
+    <nav class="navbar navbar-toggleable-md fixed-top">
+
+      <div class = "container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Voyage</a>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link nav-link-shift" href="index.html">My Tasks <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link nav-link-shift" href="projects.html">Projects <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link nav-link-shift" href="archive.html">Archive <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0">
+            <div class="nav-item active">
+              <a class="nav-link" href="#">Logout <span class="sr-only">(current)</span></a>
+            </div>
+          </form>
+        </div>
+      </div><!--/container -->
+    </nav>
+
+    <div class="container">
+
+      <h2 class="header-align">Project Name</h2>
+      <button type="button" class="btn btn-gray header-align-btn" data-toggle="modal" data-target="#newTaskModal">
+        CREATE TASK
+      </button>
+
+      <hr/>
+
+      <!-- Tabbed menu -->
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#tasks" role="tab">Tasks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#members" role="tab">Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#details" role="tab">Details</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Tasks panel -->
+        <div class="tab-pane active" id="tasks" role="tabpanel">
+          <br>
+          <!-- Key ------------------------------------------------------------------>
+          <p class="task-key">
+            <span class="overdue">Overdue</span>
+            <span class="on-track">On Track</span>
+            <span class="completed-late">Completed Late</span>
+            <span class="completed-on-time">Completed On Time</span>
+          </p>
+
+          <table class="table">
+            <tr>
+              <td colspan="4" class="top-row"><h4><br>Incomplete</h4></td>
+            </tr>
+            <tr>
+              <th></th>
+              <th>Task Description</th>
+              <th>Owner</th>
+              <th>Due Date</th>
+              <th></th>
+            </tr>
+            <tbody>
+              <tr class="overdue">
+                <th scope="row">
+                  <div class="checkbox"><input type="checkbox" value=""></div>
+                </th>
+                <td>Fix bug in new feature</td>
+                <td>Ashley Hutton</td>
+                <td>1/28/17</td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#editTaskModal">
+                    EDIT TASK
+                  </button>
+                </td>
+              </tr>
+              <tr class="overdue">
+                <th scope="row">
+                  <div class="checkbox"><input type="checkbox" value=""></div>
+                </th>
+                <td>Call Bob</td>
+                <td>Nate Clark</td>
+                <td>2/1/17</td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#editTaskModal">
+                    EDIT TASK
+                  </button>
+                </td>
+              </tr>
+              <tr class="on-track">
+                <th scope="row">
+                  <div class="checkbox"><input type="checkbox" value=""></div>
+                </th>
+                <td>Finish Sketch Mockups</td>
+                <td>Ashley Hutton</td>
+                <td>2/8/17</td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#editTaskModal">
+                    EDIT TASK
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4"><h4><br>Complete</h4></td>
+              </tr>
+              <tr class="completed-on-time">
+                <th scope="row">
+                  <div class="checkbox"><input type="checkbox" value="" checked="checked"></div>
+                </th>
+                <td>Create Mockups for new Gregory's tool</td>
+                <td>Matt Kirkland</td>
+                <td>1/28/17</td>
+                <td></td>
+              </tr>
+              <tr class="completed-late">
+                <th scope="row">
+                  <div class="checkbox"><input type="checkbox" value="" checked="checked"></div>
+                </th>
+                <td>Get feedback on new feature</td>
+                <td>Will Carey</td>
+                <td>1/20/17</td>
+                <td></td>
+              </tr>
+              <tr class="completed-late">
+                <th scope="row">
+                  <div class="checkbox"><input type="checkbox" value="" checked="checked"></div>
+                </th>
+                <td>Fix the flux capacitor</td>
+                <td>Matt Kirkland</td>
+                <td>1/15/17</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane" id="members" role="tabpanel">
+          <br>
+          <table class="table">
+            <tr>
+              <th class="top-row">Name</b></th>
+              <th class="top-row">Tasks on Project</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td>Ashley Hutton</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Matt Kirkland</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Nate Clark</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Hannah Johnson</td>
+                <td>16</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane" id="details" role="tabpanel">
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td class="top-row"><b>Owner</b></th>
+                <td class="top-row">Ashley Hutton</th>
+              </tr>
+              <tr>
+                <td><b>Client</b></td>
+                <td>Client Name</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MODALS ------>
+
+      <!-- modal for new project -->
+      <div class="modal fade" id="newTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Task for Project Name</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Description</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" id="example-text-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">Due Date</label>
+                <div class="col-10">
+                  <input class="form-control" type="date" id="example-date-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-url-input" class="col-2 col-form-label">Owner</label>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle btn-push-left" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button">Nate</button>
+                    <button class="dropdown-item" type="button">Matt</button>
+                    <button class="dropdown-item" type="button">Ashley</button>
+                    <button class="dropdown-item" type="button">Hannah</button>
+                    <button class="dropdown-item" type="button">Will</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-green">CREATE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal for edit task -->
+      <div class="modal fade" id="editTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Task for Project Name</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Description</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" id="example-text-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">Due Date</label>
+                <div class="col-10">
+                  <input class="form-control" type="date" id="example-date-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-url-input" class="col-2 col-form-label">Owner</label>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle btn-push-left" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button">Nate</button>
+                    <button class="dropdown-item" type="button">Matt</button>
+                    <button class="dropdown-item" type="button">Ashley</button>
+                    <button class="dropdown-item" type="button">Hannah</button>
+                    <button class="dropdown-item" type="button">Will</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-red">DELETE TASK</button>
+              <button type="button" class="btn btn-green">SAVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
